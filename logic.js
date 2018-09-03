@@ -7,6 +7,8 @@ function draw(){
     ctx.drawImage(fg,0,cvs.height -fg.height);
     ctx.drawImage(bird,bX,bY);
 
+    // on a keyDown event, the bird jump
+    bY += gravity;
     // keeps drawing and running the function again and agian
     requestAnimationFrame(draw);
 }
