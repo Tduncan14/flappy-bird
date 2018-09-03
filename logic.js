@@ -5,5 +5,11 @@ function draw(){
     ctx.drawImage(pipeSouth,pX,pY +Const);
     // drawing the ground
     ctx.drawImage(fg,0,cvs.height -fg.height);
+    ctx.drawImage(bird,bX,bY);
 
+    // keeps drawing and running the function again and agian
+    requestAnimationFrame(draw);
 }
+
+// calling the function
+draw();
