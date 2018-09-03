@@ -7,6 +7,9 @@ pipe[0]={
      y:0
 };
 
+// logic of the game
+
+
 // DRAWING THE Image
 function draw(){
     for(var i =0; i<pipe.length;i++){
