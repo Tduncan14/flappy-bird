@@ -14,6 +14,7 @@ function draw(){
     // draws the pipe positon
     ctx.drawImage(pipeNorth,pipe[i].x,pipe[i].y);
     ctx.drawImage(pipeSouth,pipe[i].x,pipe[i].y+Const);
+    pipe[i].x--;
     // drawing the ground
     ctx.drawImage(fg,0,cvs.height -fg.height);
     ctx.drawImage(bird,bX,bY);
