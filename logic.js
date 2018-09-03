@@ -1,13 +1,17 @@
+var cvs = document.getElementById("canvas");
+var ctx = cvs.getContext("2d");
 
 // storing the pipes in a array  because we need a lot of differnt pipes.
 var pipe = [];
 
-pipe[0]={
-     x:cvs.width,
-     y:0
+pipe[0] = {
+    x : cvs.width,
+    y : 0
 };
 
+
 // logic of the game
+alert("Keep moving forward");
 
 
 // DRAWING THE Image
