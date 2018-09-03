@@ -2,20 +2,30 @@ var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
 // load images by storing an image into the variable
-// giving it constuctors objects with its own primitive
+// giving it constuctors
+var pipeSouth = new Image();
+// giving them sources.
+// the routes to the folder
+
 var bird = new Image();
 var bg = new Image();
 var fg = new Image();
 var pipeNorth = new Image();
-var pipeSouth = new Image();
-// giving them sources.
-// the routes to the folder
+
+// load images by storing an image into the variable
+// giving it constuctors
 bird.src ="images/bird.png"
 bg.src ="images/bg.png"
 fg.src ="images/fg.png"
 pipeNorth.src="images/pipeNorth.png"
-pipeSouth.src="images/pipeSouth.png"
+pipeSouth.src="images/pipeSouth.png" 
+var constant;
+var bX = 10;
+var bY = 150;
 
+var gravity = 1.5;
+
+var score = 0;
 // storing the pipes in a array  because we need a lot of differnt pipes.
 var pipe = [];
 
@@ -32,16 +42,16 @@ alert("Keep moving forward");
 // DRAWING THE Image
 function draw(){
     for(var i =0; i<pipe.length;i++){
-    ctx.drawImage(bg,0.0);
+    ctx.drawImage(bg,0,0);
     // draws the pipe positon
     ctx.drawImage(pipeNorth,pipe[i].x,pipe[i].y);
-    ctx.drawImage(pipeSouth,pipe[i].x,pipe[i].y+Const);
+    ctx.drawImage(pipeSouth,pipe[i].x,pipe[i].y+constant);
     pipe[i].x--;
     if(pipe[i].x == cvs.width-188){
         // creates a new pipe at that position, if the already existing pipes reach a certain position
         pipe.push({
             x:cvs.width,
-            y:Math.floor(Math.random() *pN.height)-pN.height
+            y:Math.floor(Math.random()*pipeNorth.height)-pipeNorth.height
         });
     }
     // drawing the ground
