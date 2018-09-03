@@ -10,11 +10,11 @@ var pipeNorth = new Image();
 var pipeSouth = new Image();
 // giving them sources.
 // the routes to the folder
-bird.src ="images/"
-bg.src ="images/"
-fg.src ="images/"
-pipeNorth.src="images/"
-pipeSouth.src="images/"
+bird.src ="images/bird.png"
+bg.src ="images/bg.png"
+fg.src ="images/fg.png"
+pipeNorth.src="images/pipeNorth.png"
+pipeSouth.src="images/pipeSouth.png"
 
 // storing the pipes in a array  because we need a lot of differnt pipes.
 var pipe = [];
