@@ -15,6 +15,13 @@ function draw(){
     ctx.drawImage(pipeNorth,pipe[i].x,pipe[i].y);
     ctx.drawImage(pipeSouth,pipe[i].x,pipe[i].y+Const);
     pipe[i].x--;
+    if(pipe[i].x == cvs.width-188){
+        // creates a new pipe at that position, if the already existing pipes reach a certain position
+        pipe.push({
+            x:cvs.width,
+            y:Math.floor(Math.random() *pN.height)-pN.height
+        });
+    }
     // drawing the ground
     ctx.drawImage(fg,0,cvs.height -fg.height);
     ctx.drawImage(bird,bX,bY);
