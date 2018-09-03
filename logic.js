@@ -11,6 +11,9 @@ var pipeSouth = new Image();
 // giving them sources.
 bird.src =""
 bg.src =""
+fg.src =""
+pipeNorth.src=""
+pipeSouth.src=""
 
 // storing the pipes in a array  because we need a lot of differnt pipes.
 var pipe = [];
