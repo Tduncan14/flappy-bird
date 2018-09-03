@@ -1,6 +1,14 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
+var constant = pipeNorth.height +gap;
+var bX = 10;
+var bY = 150;
+
+var gravity = 1.5;
+
+var score = 0;
+
 // load images by storing an image into the variable
 // giving it constuctors
 var pipeSouth = new Image();
@@ -19,13 +27,7 @@ bg.src ="images/bg.png"
 fg.src ="images/fg.png"
 pipeNorth.src="images/pipeNorth.png"
 pipeSouth.src="images/pipeSouth.png" 
-var constant;
-var bX = 10;
-var bY = 150;
 
-var gravity = 1.5;
-
-var score = 0;
 // storing the pipes in a array  because we need a lot of differnt pipes.
 var pipe = [];
 
