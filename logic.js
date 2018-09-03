@@ -1,3 +1,7 @@
+
+// storing the pipes in a array  because we need a lot of differnt pipes.
+
+
 // DRAWING THE Image
 function draw(){
     ctx.drawImage(bg,0.0);
