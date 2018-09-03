@@ -3,13 +3,15 @@
 var pipe = [];
 
 pipe[0]={
-
-}
+     x:cvs.width,
+     y:0
+};
 
 // DRAWING THE Image
 function draw(){
+    for(var i =0; i<pipe.length;i++){
     ctx.drawImage(bg,0.0);
-    ctx.drawImage(pipeNorth,pX,pY);
+    ctx.drawImage(pipeNorth,pipe[i].x,pipe[i].y);
     ctx.drawImage(pipeSouth,pX,pY +Const);
     // drawing the ground
     ctx.drawImage(fg,0,cvs.height -fg.height);
@@ -20,6 +22,6 @@ function draw(){
     // keeps drawing and running the function again and agian
     requestAnimationFrame(draw);
 }
-
+}
 // calling the function
 draw();
