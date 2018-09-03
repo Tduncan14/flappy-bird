@@ -1,6 +1,17 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
+// load images by storing an image into the variable
+// giving it constuctors objects with its own primitive
+var bird = new Image();
+var bg = new Image();
+var fg = new Image();
+var pipeNorth = new Image();
+var pipeSouth = new Image();
+// giving them sources.
+bird.src =""
+bg.src =""
+
 // storing the pipes in a array  because we need a lot of differnt pipes.
 var pipe = [];
 
