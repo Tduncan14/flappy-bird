@@ -1,6 +1,10 @@
 
 // storing the pipes in a array  because we need a lot of differnt pipes.
+var pipe = [];
 
+pipe[0]={
+
+}
 
 // DRAWING THE Image
 function draw(){
