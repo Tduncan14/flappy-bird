@@ -1,14 +1,6 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
-var constant = pipeNorth.height +gap;
-var bX = 10;
-var bY = 150;
-
-var gravity = 1.5;
-
-var score = 0;
-
 // load images by storing an image into the variable
 // giving it constuctors
 var pipeSouth = new Image();
@@ -22,11 +14,39 @@ var pipeNorth = new Image();
 
 // load images by storing an image into the variable
 // giving it constuctors
-bird.src ="images/bird.png"
-bg.src ="images/bg.png"
-fg.src ="images/fg.png"
-pipeNorth.src="images/pipeNorth.png"
-pipeSouth.src="images/pipeSouth.png" 
+bird.src ="images/bird.png";
+bg.src ="images/bg.png";
+fg.src ="images/fg.png";
+pipeNorth.src="images/pipeNorth.png";
+pipeSouth.src="images/pipeSouth.png";
+
+var gap = 85;
+var constant ;
+var bX = 10;
+var bY = 150;
+
+var gravity = 1.5;
+
+var score = 0;
+
+// adds an audio and stores in a variable
+// every time the creature flies
+var fly = new Audio();
+var scor = new Audio ();
+
+// adding the sound to the variables // updating
+fly.src ="fly.mp3";
+scor.src = "score.mp3";
+
+// on key press down
+
+document.addEventListener("keydown" ,moveUp);
+
+function moveUp(){
+    bY -= 25;
+    // then the sound plays
+    fly.play();
+}
 
 // storing the pipes in a array  because we need a lot of differnt pipes.
 var pipe = [];
