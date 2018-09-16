@@ -1,3 +1,3 @@
 # flappy-bird
 flappyBird creation
-![flappyBirdGame]("./images/picture")
+![flappyBirdGame]("./images/picture.png")
